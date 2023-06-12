@@ -1,0 +1,18 @@
+let suggestions = [
+   'itching', 'skin_rash','nodal_skin_eruptions','continuous_sneezing','shivering','chills',
+    'joint_pain','stomach_pain','acidity','ulcers_on_tongue','vomiting','fatigue','weight_gain','anxiety', 
+    'cold_hands_and_feets','mood_swings','weight_loss','restlessness','cough','high_fever', 
+    'breathlessness','sweating','dehydration','indigestion','headache','yellowish_skin',  
+    'dark_urine','nausea','loss_of_appetite','pain_behind_the_eyes',
+    'back_pain','constipation','abdominal_pain','mild_fever',
+    'yellowing_of_eyes','swelling_of_stomach','blurred_and_distorted_vision','throat_irritation',
+    'redness_of_eyes','runny_nose','congestion','chest_pain','weakness_in_limbs',
+    'fast_heart_rate','pain_during_bowel_movements','pain_in_anal_region','bloody_stool',
+    'irritation_in_anus','neck_pain','dizziness','cramps','bruising','obesity','swollen_legs',
+    'puffy_face_and_eyes','brittle_nails',
+    'swollen_extremeties','excessive_hunger','extra_marital_contacts','drying_and_tingling_lips',
+    'depression','irritability','muscle_pain',
+    'abnormal_menstruation','dischromic _patches','increased_appetite',
+    'lack_of_concentration','visual_disturbances','stomach_bleeding','pus_filled_pimples',
+    'blackheads','skin_peeling','blister',
+];

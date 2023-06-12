@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptoms Based Disease prediction Model</title>
+    <!-- <script>window.alert("Please Enter 3 to 5 Symptom for better Prediction");</script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="s_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+  <nav class="navbar">
+      <div class="content">
+        <div class="logo"><a href="#">SmartCare</a></div>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <li><a href="nav.html">Home</a></li>
+        <li><a href="symptoms.html">Prediction</a></li>
+        <li><a href="consultancy.html">Consultancy</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="hosp1feedback.html">Feedback</a></li>
+        </ul>
+        <div class="icon menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- <header>
+      <a href="#" class="logo">SmartCare</a>
+      <div class="navigation">
+        <ul class="menu"> -->
+          <!-- <div class="close-btn"></div> -->
+          <!-- <li class="menu-item"><a href="#">Home</a></li> -->
+          <!-- <li class="menu-item"> -->
+           <!--  <a class="sub-btn" href="#">Prediction<i class="fas fa-angle-down"></i></a>
+            <ul class="sub-menu">
+              <li class="sub-item"><a href="#">Sub Item 01</a></li>
+              <li class="sub-item"><a href="#">Sub Item 02</a></li>
+              <li class="sub-item"><a href="#">Sub Item 03</a></li>
+            </ul> -->
+          <!-- </li> -->
+          <!-- <li class="menu-item">
+            <a class="sub-btn" href="#">With Sub-dropdown <i class="fas fa-angle-down"></i></a>
+            <ul class="sub-menu">
+              <li class="sub-item"><a href="#">Sub Item 01</a></li>
+              <li class="sub-item"><a href="#">Sub Item 02</a></li>
+              <li class="sub-item"><a href="#">Sub Item 03</a></li>
+              <li class="sub-item"><a href="#">Sub Item 04</a></li>
+              <li class="sub-item more">
+                <a class="more-btn" href="#">More Items <i class="fas fa-angle-right"></i></a> -->
+          <!--       <ul class="more-menu">
+                  <li class="more-item"><a href="#">More Item 01</a></li>
+                  <li class="more-item"><a href="#">More Item 02</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li> -->
+        <!--   <li class="menu-item"><a href="#">Prediction</a></li>
+          <li class="menu-item"><a href="#">Consultancy</a></li>
+          <li class="menu-item"><a href="#">About</a></li>
+          <li class="menu-item"><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+      <div class="menu-btn"></div>
+    </header> -->
+<script src="script.js"></script>
+
+  <script>
+  let nav = document.querySelector("nav");
+    window.onscroll = function() {
+      if(document.documentElement.scrollTop > 20){
+        nav.classList.add("sticky");
+      }else {
+        nav.classList.remove("sticky");
+      }
+    }
+  </script>
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menu = document.querySelector(".menu-list");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      menu.classList.add("active");
+      menuBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+      body.classList.add("disabledScroll");
+    }
+    cancelBtn.onclick = ()=>{
+      menu.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      body.classList.remove("disabledScroll");
+    }
+
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+  
+    <video autoplay muted loop id="myVideo">
+  <source src="m1.mp4" type="video/mp4">
+</video>
+
+<br><br><br><br><br>
+ <h1 style="text-align:center;"> Become Your Own Doctor </h1><br>
+    <div class="wrapper">
+      <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input type="text" placeholder="Search First Symptom..">
+        <div class="autocom-box">
+          <!-- here list are inserted from javascript -->
+        </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+    </div>
+	</div>
+  
+  <!-- <img src="m2.png" class="image"></img> -->
+
+    <div class="wrapper">
+     <div class="search-input">
+        <input type="text" placeholder="Search Second Symptom..">
+        <div class="autocom-box">
+          <!-- here list are inserted from javascript -->
+        </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+     <div class="search-input">
+        <input type="text" placeholder="Search Third Symptom..">
+        <div class="autocom-box">
+          <!-- here list are inserted from javascript -->
+        </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
+
+
+    <div class="wrapper">
+     <div class="search-input">
+        <input type="text" placeholder="Search Fourth Symptom..">
+        <div class="autocom-box">
+          <!-- here list are inserted from javascript -->
+        </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+      </div>	
+    </div>
+
+
+    <div class="wrapper">
+     <div class="search-input">
+        <input type="text" placeholder="Search Fifth Symptom..">
+        <div class="autocom-box">
+          <!-- here list are inserted from javascript -->
+        </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
+  
+  <div class="submit" id="submit" onclick="send_data()"><button>Submit</button></div>
+
+    <!-- <div class="container">
+	  <button class="btn btn1" id="submit" onclick="send_data()" >Submit</button>
+	</div> -->
+    <!-- <section class="section-home"> -->
+     
+     <!--  <div class="dropdown">
+	  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    Dropdown button
+	  </button>
+	  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+	    <a class="dropdown-item" href="#">Action</a>
+	    <a class="dropdown-item" href="#">Another action</a>
+	    <a class="dropdown-item" href="#">Something else here</a>
+	  </div>
+	</div> -->
+<!-- 	<div class="btn-group dropright">
+  <button type="button" class="btn btn-secondary">
+    Symptom
+  </button>
+  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropright</span>
+  </button>
+  <div class="dropdown-menu"> -->
+    <!-- Dropdown menu links -->
+  <!--   <a class="dropdown-item" href="#">Action</a>
+	    <a class="dropdown-item" href="#">Another action</a>
+	    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div> -->
+
+
+
+<!-- <div class="btn-group dropright">
+  <button type="button" class="btn btn-secondary">
+    Symptom
+  </button>
+  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropright</span>
+  </button> -->
+
+
+
+    <!-- </section>  -->
+ 
+
+    <script type="text/javascript">
+    //jquery for toggle dropdown menus
+    $(document).ready(function(){
+      //toggle sub-menus
+      $(".sub-btn").click(function(){
+        $(this).next(".sub-menu").slideToggle();
+      });
+
+      //toggle more-menus
+      $(".more-btn").click(function(){
+        $(this).next(".more-menu").slideToggle();
+      });
+    });
+
+    //javascript for the responsive navigation menu
+    var menu = document.querySelector(".menu");
+    var menuBtn = document.querySelector(".menu-btn");
+    // var closeBtn = document.querySelector(".close-btn");
+
+    menuBtn.addEventListener("click", () => {
+      menu.classList.add("active");
+    });
+	
+    // closeBtn.addEventListener("click", () => {
+    //   menu.classList.remove("active");
+    // });
+
+    //javascript for the navigation bar effects on scroll
+    // window.addEventListener("scroll", function(){
+    //   var header = document.querySelector("header");
+    //   header.classList.toggle("sticky", window.scrollY > 0);
+    // });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<script src="js/suggestions.js"></script>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

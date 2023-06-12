@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Feedback Page</title>
+   <link rel="stylesheet" type="text/css" href="Feedback style.css">
+    <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+</head>
+<body>
+	<nav class="navbar">
+    <div class="content">
+      <div class="logo">
+      	<a href="#">SmartCare</a></div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="nav.html">Home</a></li>
+        <li><a href="symptoms.html">Prediction</a></li>
+        <li><a href="consultancy.html">Consultancy</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="hosp1feedback.html">Feedback</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+    
+	<section></section>
+   <div class="container">
+     <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScvsdM50vYgQy9pwCOxwb9tOIacdfPgtiATF0Gf-1zOIm5l8w/formResponse">
+        <h1>Give your valuable feedback</h1>
+        <div class="id">
+        	<input type="text" name="entry.1532843170" placeholder="Full Name">
+        	<i class="far fa-user"></i>
+        </div>
+        <div class="id">
+        	<input type="email" name="entry.1423601205" placeholder="Email Address">
+        	<i class="far fa-envelope"></i>
+        </div>
+            <input type="opinions" name="entry.257340116"
+        	 placeholder="Enter your opinions here..">
+        	<button>Send</button>
+        </form>
+    </div>
+
+<script>
+  let nav = document.querySelector("nav");
+    window.onscroll = function() {
+      if(document.documentElement.scrollTop > 20){
+        nav.classList.add("sticky");
+      }else {
+        nav.classList.remove("sticky");
+      }
+    }
+  </script>
+
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menu = document.querySelector(".menu-list");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      menu.classList.add("active");
+      menuBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+      body.classList.add("disabledScroll");
+    }
+    cancelBtn.onclick = ()=>{
+      menu.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      body.classList.remove("disabledScroll");
+    }
+
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+</body>
+</html>
