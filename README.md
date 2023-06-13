@@ -1,1 +1,1 @@
-"# symptom-based-disease-prediction" 
+# symptom-based-disease-prediction
